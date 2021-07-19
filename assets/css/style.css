@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&family=Tourney:wght@700&display=swap');
 
+/*Styling for the background and title of the game
+that is the same all the time*/
+
 body {
     height: 100%;
     width: 100%;
@@ -18,6 +21,8 @@ body {
     padding: 2%;
 }
 
+/*Styling for the start menu*/
+
 #menu-container{
     display: flex;
     flex-direction: column;
@@ -29,7 +34,7 @@ body {
     margin: 0 auto;
     border-radius: 10px;
 }
-.how-to-btn, .start-game-btn, .about-btn {
+.how-to-btn, .start-game-btn, .about-btn, .back {
     text-align: center;
     margin: 1rem;
     padding: 2%;
@@ -47,3 +52,41 @@ body {
     padding: 3%;
     font-size: 32px;
 }
+
+/*Styling for the "How to play" section*/
+
+#how-to-play{
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+}
+#how-to-play h3{
+    font-family: Tourney, sans-serif;
+    font-size: 28px;
+    margin-top: 3rem;
+    
+}
+#how-to-play p{
+    font-family: Roboto, sans-serif;
+    font-size: 20px;
+    padding: 1%;
+    margin: 1rem;
+}
+.back-btn{
+    font-size: 20px;
+    font-family: Tourney, sans-serif;
+    padding: 1%;
+    background-color: #00cc99;
+    border: 1px solid black;
+    border-radius: 10px; 
+    margin: 0 auto;
+    margin-bottom: 1rem;
+}
+.back-btn:hover{
+    background-color: #ff4da6;
+    padding: 1%;
+    font-size: 26px;
+}
+
+/* Styling for "start game" section */
