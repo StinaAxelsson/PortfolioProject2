@@ -6,6 +6,7 @@ body {
     margin: 0;
     background-image: url(../images/bg.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #heading {
@@ -14,4 +15,35 @@ body {
     font-family: Tourney, sans-serif;
     font-size: 30px;
     color: #ff4da6;
+    padding: 2%;
+}
+
+#menu-container{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    background-color: rgba(255, 230, 242, 0.3);
+    width: 50%;
+    height: 60vh;
+    margin: 0 auto;
+    border-radius: 10px;
+}
+.how-to-btn, .start-game-btn, .about-btn {
+    text-align: center;
+    margin: 1rem;
+    padding: 2%;
+}
+.menu-btn {
+    font-size: 28px;
+    font-family: Tourney, sans-serif;
+    padding: 2%;
+    background-color: #00cc99;
+    border: 1px solid black;
+    border-radius: 10px;    
+}
+.menu-btn:hover{
+    background-color: #ff4da6;
+    padding: 3%;
+    font-size: 32px;
 }
