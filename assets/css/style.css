@@ -28,7 +28,7 @@ body {
     flex-direction: column;
     align-content: center;
     justify-content: center;
-    background-color: rgba(255, 230, 242, 0.3);
+    background-color: rgba(255, 230, 242, 0.4);
     width: 50%;
     height: 60vh;
     margin: 0 auto;
@@ -36,7 +36,6 @@ body {
 }
 .how-to-btn, .start-game-btn, .about-btn, .back {
     text-align: center;
-    margin: 1rem;
     padding: 2%;
 }
 .menu-btn {
@@ -45,12 +44,20 @@ body {
     padding: 2%;
     background-color: #00cc99;
     border: 1px solid black;
-    border-radius: 10px;    
+    border-radius: 10px;
+    width: 23%;    
+    margin: 1em auto;
+    
 }
 .menu-btn:hover{
     background-color: #ff4da6;
     padding: 3%;
     font-size: 32px;
+}
+.menu-btn a{
+    text-decoration: none;
+    color: black;
+    
 }
 
 /*Styling for the "How to play" section*/
