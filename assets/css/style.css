@@ -97,8 +97,56 @@ body {
 
 /* Styling for "start game" section */
 
+#start-game{  
+    text-align: center;  
+    height: 100%;
+}
 
+#start-game h3{
+    font-family: Tourney, sans-serif;
+    font-size: 28px;
+    margin-top: 3rem;  
+}
 
+.ship-container{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin: 4rem;
+    justify-content: space-around;
+}
+
+.black-ship, .purple-ship, .green-ship{
+    font-size: 4rem;
+}
+.black-ship{
+    color: black;
+}
+.purple-ship{
+    color: blueviolet;
+}
+.green-ship{
+    color: green;
+}
+
+#start-game p{
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    padding: 1%;
+    margin: 1rem;
+}
+
+#black-ship:hover, #purple-ship:hover, #green-ship:hover{
+    border: 3px solid black;
+    border-radius: 10px;
+    padding-top: 1%;  
+}
+#black-ship a, #purple-ship a, #green-ship a{
+    text-decoration: none;
+    color: black;
+}
+
+/* Styling for the game board page*/
 
 
 
