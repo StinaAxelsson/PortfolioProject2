@@ -195,6 +195,22 @@ body {
     left: 130px;
     top: 350px;
 }
+#bullets{
+    width: 300px;
+    height: 400px;
+    position: absolute;
+
+}
+.bullet{
+    width: 15px;
+    height: 20px;
+    background-image: url("../images/rocket-icon.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 130px;
+    top: 350px;
+}
 
 /*Styling for smaller devices*/
 

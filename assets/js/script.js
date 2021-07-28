@@ -19,20 +19,46 @@ window.addEventListener("keydown", (e) => {
         left: 130
     };
 
+    const bullets = [];
+
     document.onkeydown = function(e){
 
-        if (e.key == "ArrowLeft" ){
+        if (e.keyCode === 37 ){
             console.log("LEFT");
             player.left = player.left - 10;
-            movePlayer();
+            
         }
-        else if (e.key == "ArrowRight" ){
+        if (e.keyCode === 39 ){
             console.log("RIGHT");
             player.left = player.left + 10;
-            movePlayer();
+           
         }
+        if (e.keyCode === 32){
+            console.log("SPACE");
+            bullets.push({
+                left: player.left +20,
+                top: player.top -20
+            });
+            drawBullets()
+        }
+        drawPlayer();
     }
 
-    function movePlayer(){
+
+
+    function drawPlayer() {
         document.getElementById('player').style.left = player.left + 'px';
+        document.getElementById('player').style.top = player.top + 'px';
+    }
+
+    function drawBullets() {
+        document.getElementById('bullets').innerHTML = ""
+        for(let i = 0 ; i < bullets.length ; i++ ) {
+            document.getElementById('bullets').innerHTML += `<div class='bullet' style='left:${bullets[i].left}px; top:${bullets[i].top}px'></div>`;
+        }
+    }
+    function moveBullets() {
+        for(let i = 0 ; i < bullets.length ; i++ ) {
+            bullets[i].top = bullets[i].top - 8
+        }
     }
