@@ -1,18 +1,5 @@
-/*const player = document.getElementById('player');
 
 
-
-window.addEventListener("keydown", (e) => {
-    let left =parseInt(window.getComputedStyle(player).getPropertyValue("left"));
-        if (e.key == "ArrowLeft" && left > 0){
-            player.style.left = left - 10 + "px";
-        } 
-        else if 
-            (e.key == "ArrowRight" && left <=250){
-            player.style.left = left + 10 + "px";
-        }
-
-    });*/
 
     const player ={
         top: 350,
@@ -20,6 +7,8 @@ window.addEventListener("keydown", (e) => {
     };
 
     const bullets = [];
+    const comets = [
+    ];
 
     document.onkeydown = function(e){
 
@@ -62,3 +51,24 @@ window.addEventListener("keydown", (e) => {
             bullets[i].top = bullets[i].top - 8
         }
     }
+    function drawComets() {
+        let comet = document.getElementsByClassName("comet");
+
+        for(let i = 0 ; i < comet.length ; i++ ) {
+            document.getElementById('comets').innerHTML += `<div class='comet' style='left:${comets[i].left}px; top:${comets[i].top}px'></div>`;
+        }
+    }
+    function moveComets() {
+        for(let i = 0 ; i < comets.length ; i++ ) {
+            comets[i].top = comets[i].top + 1;
+        }
+    }
+
+    function gameLoop(){
+        setTimeout(gameLoop, 1000)
+        moveBullets();
+        drawBullets();
+        moveComets();
+        drawComets();
+    }
+    gameLoop()

@@ -211,6 +211,19 @@ body {
     left: 130px;
     top: 350px;
 }
+#comets{
+ width: 300px;
+ height: 400px;
+ position: absolute;
+}
+.comet{
+    width: 50px;
+    height: 50px;
+    background-image: url("../images/comet.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+}
 
 /*Styling for smaller devices*/
 
