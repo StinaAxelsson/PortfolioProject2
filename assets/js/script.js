@@ -1,4 +1,4 @@
-const player = document.getElementById('player');
+/*const player = document.getElementById('player');
 
 
 
@@ -12,4 +12,27 @@ window.addEventListener("keydown", (e) => {
             player.style.left = left + 10 + "px";
         }
 
-    });
+    });*/
+
+    const player ={
+        top: 350,
+        left: 130
+    };
+
+    document.onkeydown = function(e){
+
+        if (e.key == "ArrowLeft" ){
+            console.log("LEFT");
+            player.left = player.left - 10;
+            movePlayer();
+        }
+        else if (e.key == "ArrowRight" ){
+            console.log("RIGHT");
+            player.left = player.left + 10;
+            movePlayer();
+        }
+    }
+
+    function movePlayer(){
+        document.getElementById('player').style.left = player.left + 'px';
+    }
