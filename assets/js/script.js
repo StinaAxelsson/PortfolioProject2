@@ -66,6 +66,21 @@
             comets[i].top = comets[i].top + 5;
         }
     }
+    function collisionDetection() {
+        for (var comet = 0; comet < comets.length; comet++) {
+            for (var bullet = 0; bullet < bullets.length; bullet++) {
+                if ( 
+                    bullets[bullet].left >= comets[comet].left  &&
+                    bullets[bullet].left <= (comets[comet].left + 50)  &&
+                    bullets[bullet].top <= (comets[comet].top + 50)  &&
+                    bullets[bullet].top >= comets[comet].top
+                ) {
+                    comets.splice(comet, 1);
+                    bullets.splice(bullet, 1);
+                }
+            }
+        }
+    }
 
     function gameLoop(){
         setTimeout(gameLoop, 100)
@@ -73,5 +88,6 @@
         drawBullets();
         moveComets();
         drawComets();
+        collisionDetection();
     }
     gameLoop()
