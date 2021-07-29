@@ -8,6 +8,9 @@
 
     const bullets = [];
     const comets = [
+        { left: 100, top: 0 },
+        { left: 150, top: 0 },
+        { left: 200, top: 0 },
     ];
 
     document.onkeydown = function(e){
@@ -48,24 +51,24 @@
     }
     function moveBullets() {
         for(let i = 0 ; i < bullets.length ; i++ ) {
-            bullets[i].top = bullets[i].top - 8
+            bullets[i].top = bullets[i].top - 20
         }
     }
     function drawComets() {
-        let comet = document.getElementsByClassName("comet");
+        document.getElementById("comets");
 
-        for(let i = 0 ; i < comet.length ; i++ ) {
+        for(let i = 0 ; i < comets.length ; i++ ) {
             document.getElementById('comets').innerHTML += `<div class='comet' style='left:${comets[i].left}px; top:${comets[i].top}px'></div>`;
         }
     }
     function moveComets() {
-        for(let i = 0 ; i < comets.length ; i++ ) {
-            comets[i].top = comets[i].top + 1;
+        for(var i = 0 ; i < comets.length ; i++ ) {
+            comets[i].top = comets[i].top + 5;
         }
     }
 
     function gameLoop(){
-        setTimeout(gameLoop, 1000)
+        setTimeout(gameLoop, 100)
         moveBullets();
         drawBullets();
         moveComets();
